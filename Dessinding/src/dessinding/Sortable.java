@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package dessinding;
+import java.util.ArrayList;
 
-/**
- *
- * @author Mahmoud Osman
- */
+
+
 public interface Sortable {
-    void sort(int[] array);
+    
+     public void sort(ArrayList<Integer> list);
+     
 }
 

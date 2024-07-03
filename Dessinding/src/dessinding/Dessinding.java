@@ -4,23 +4,35 @@
  * and open the template in the editor.
  */
 package dessinding;
+import java.util.Scanner;
+import java.util.ArrayList;
 
-/**
- *
- * @author Mahmoud Osman
- */
+
 public class Dessinding {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        int[] array = {3, 6, 1, 8, 4, 5};
-
-        Sortable quickSort = new QuickSort();
-        quickSort.sort(array);
-        System.out.println("QuickSort: " + java.util.Arrays.toString(array));
-
+       Scanner elem = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        
+        System.out.println("Enter The Size: ");
+        int size = s.nextInt();
+        for(int i=0;i<size;i++){
+            System.out.println("Enter The Element: ");
+            int element = elem.nextInt();
+            list.add(element);
+        }
+        System.out.println("The List = " + list);
+        
+        // MergeSort
+        MergeSort sorter1 = new MergeSort();
+        sorter1.sort(list);
+        System.out.println("Sorted list (MergeSort): " + list);
+        
+        // QuickSort
+        QuickSort sorter2 = new QuickSort();
+        sorter2.sort(list);
+        System.out.println("Sorted list (QuickSort): " + list);
     }
 }
     
