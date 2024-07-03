@@ -24,15 +24,19 @@ public class Dessinding {
         }
         System.out.println("The List = " + list);
         
+        QuickSort sort2 = new QuickSort();
+        sort2.sort(list);
+        System.out.println("Sorted lise (QuickSort): " + list);
+        
+        System.out.println("Then the sort with the MergeSort is =>");
+        
         // MergeSort
         MergeSort sorter1 = new MergeSort();
         sorter1.sort(list);
         System.out.println("Sorted list (MergeSort): " + list);
         
         // QuickSort
-        QuickSort sorter2 = new QuickSort();
-        sorter2.sort(list);
-        System.out.println("Sorted list (QuickSort): " + list);
+        
     }
 }
     
